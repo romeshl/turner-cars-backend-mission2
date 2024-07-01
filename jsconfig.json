@@ -1,7 +1,5 @@
 {
     "typeAcquisition": {
-        "include": [
-            "Routes/calculateRiskRating.js"
-        ]
+        "include": []
     }
 }
