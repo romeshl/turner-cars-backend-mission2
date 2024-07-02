@@ -17,8 +17,8 @@ function calculatePremium(carValue, driverRating) {
   const monthlyPremium = yearlyPremium / 12;
   // Return the premiums as an object, formatted to two decimal places
   return {
-    monthly_Premium: monthlyPremium.toFixed(2),
-    yearly_Premium: yearlyPremium.toFixed(2)
+    monthly_premium: Math.round(monthlyPremium * 100)/100,
+    yearly_premium: Math.round(yearlyPremium * 100)/100
   };
 }
 // Duplicate function definition here is likely an error or oversight; ensure to remove or differentiate if intentional
