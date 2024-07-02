@@ -11,10 +11,9 @@ function calculatePremium(carValue, driverRating) {
   const yearlyPremium = (carValue * driverRating) / 100;
   const monthlyPremium = yearlyPremium / 12;
   return {
-    yearlyPremium: yearlyPremium.toFixed(2),
-    monthlyPremium: monthlyPremium.toFixed(2),
+    monthly_Premium: monthlyPremium.toFixed(2),
+    yearly_Premium: yearlyPremium.toFixed(2)
   };
 }
-
 
 module.exports = calculatePremium;
