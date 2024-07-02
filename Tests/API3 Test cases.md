@@ -1,5 +1,3 @@
-Here is the data in table format:
-
 ### Positive Test Cases
 
 | Test Case | Test Description | Input | Expected Output |
