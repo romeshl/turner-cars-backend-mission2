@@ -7,7 +7,7 @@ const app = express();
 // Import routers from the API2 and API3 directories
 const RiskRatingCalculator = require("./Routes/RiskRatingCalculator/RiskRatingCalculator");
 const PremiumCalculator = require("./Routes/PremiumCalculator/PremiumCalculator");
-const API1 = require('./routes/API1');
+const API1 = require('./Routes/API-1/API1');
 
 // Middleware to parse JSON bodies
 // This allows us to access request body data as JSON
