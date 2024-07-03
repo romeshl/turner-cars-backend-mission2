@@ -7,10 +7,14 @@ const app = express();
 // Import routers from the API2 and API3 directories
 const RiskRatingCalculator = require("./Routes/RiskRatingCalculator/RiskRatingCalculator");
 const PremiumCalculator = require("./Routes/PremiumCalculator/PremiumCalculator");
+const API1 = require('./routes/API1');
 
 // Middleware to parse JSON bodies
 // This allows us to access request body data as JSON
 app.use(express.json());
+
+// Use the API1 routes when the path starts with '/API1'
+app.use('/API1', API1);
 
 // Use the API2 router for requests to /API2
 // This means any request to /API2/* will be handled by the API2 router
