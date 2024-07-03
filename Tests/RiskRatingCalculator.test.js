@@ -1,7 +1,7 @@
 const request = require("supertest");
 const serverAddress = "http://localhost:3000"
 
-describe("API2 - Positive Test Cases.", () => {
+describe("RiskRatingCalculator - Positive Test Cases.", () => {
   const positiveTestCases = [
     {
       case: "1 - Input containing all the keywords exactly once.",
@@ -47,7 +47,7 @@ describe("API2 - Positive Test Cases.", () => {
   positiveTestCases.forEach((testCase) => {
     test(testCase.case, async () => {
       const response = await request(serverAddress)
-        .post("/API2")
+        .post("/RiskRatingCalculator")
         .set("Accept", "application/json")
         .send(testCase.input);
       expect(response.status).toBe(200);
@@ -58,7 +58,7 @@ describe("API2 - Positive Test Cases.", () => {
 });
 
 
-describe("API2 - Negative Cases", () => {
+describe("RiskRatingCalculator - Negative Cases", () => {
   const negativeTestCases = [
     {
       case: "1 - Input is an empty string.",
@@ -112,7 +112,7 @@ describe("API2 - Negative Cases", () => {
     },
     {
       case: "11 - Input is a function.",
-      input: { claim_history: () => { } },
+      input: { claim_history: () => {} },
       output: { error: "there is an error" },
     },
     {
@@ -150,7 +150,7 @@ describe("API2 - Negative Cases", () => {
   negativeTestCases.forEach((testCase) => {
     test(testCase.case, async () => {
       const response = await request(serverAddress)
-        .post("/API2")
+        .post("/RiskRatingCalculator")
         .set("Accept", "application/json")
         .send(testCase.input);
       expect(response.status).toBe(400);

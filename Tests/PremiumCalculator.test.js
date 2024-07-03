@@ -1,7 +1,7 @@
 const request = require("supertest");
 const serverAddress = "http://localhost:3000"
 
-describe("API3 - Positive Test Cases", () => {
+describe("PremiumCalculator - Positive Test Cases", () => {
   // Positive Test Cases
   const positiveTestCases = [
     {
@@ -49,7 +49,7 @@ describe("API3 - Positive Test Cases", () => {
   positiveTestCases.forEach((testCase) => {
     test(testCase.case, async () => {
       const response = await request(serverAddress)
-        .post("/API3")
+        .post("/PremiumCalculator")
         .set("Accept", "application/json")
         .send(testCase.input);
       expect(response.status).toBe(200);
@@ -58,7 +58,7 @@ describe("API3 - Positive Test Cases", () => {
   });
 });
 
-describe("API3 - Negative Cases", () => {
+describe("PremiumCalculator - Negative Cases", () => {
   const negativeTestCases = [
     {
       case: "1 - Input is a negative car_value.",
@@ -130,7 +130,7 @@ describe("API3 - Negative Cases", () => {
   negativeTestCases.forEach((testCase) => {
     test(testCase.case, async () => {
       const response = await request(serverAddress)
-        .post("/API3")
+        .post("/PremiumCalculator")
         .set("Accept", "application/json")
         .send(testCase.input);
       expect(response.status).toBe(400);
