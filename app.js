@@ -4,29 +4,30 @@ const express = require("express");
 // Initialize an Express application
 const app = express();
 
-// Import routers from the API2 and API3 directories
+// Import routers from the respective APIs for modular route handling
 const RiskRatingCalculator = require("./Routes/RiskRatingCalculator/RiskRatingCalculator");
 const PremiumCalculator = require("./Routes/PremiumCalculator/PremiumCalculator");
-const API1 = require('./routes/API1');
+const CarValueCalculator = require("./Routes/CarValueCalculator/CarValueCalculator");
 
 // Middleware to parse JSON bodies
-// This allows us to access request body data as JSON
+// This allows us to access request body data as JSON, which is essential for POST and PUT requests
 app.use(express.json());
 
-// Use the API1 routes when the path starts with '/API1'
-app.use('/API1', API1);
+// Use the CarValueCalculator routes when the path starts with '/CarValueCalculator'
+// This router handles all requests related to car value calculations
+app.use("/CarValueCalculator", CarValueCalculator);
 
-// Use the API2 router for requests to /API2
-// This means any request to /API2/* will be handled by the API2 router
+// Use the RiskRatingCalculator router for requests to '/RiskRatingCalculator'
+// This router manages risk rating calculations for insurance purposes
 app.use("/RiskRatingCalculator", RiskRatingCalculator);
 
-// Use the API3 router for requests to /API3
-// Similar to API2, but for routes defined in API3
+// Use the PremiumCalculator router for requests to '/PremiumCalculator'
+// This router is responsible for calculating insurance premiums
 app.use("/PremiumCalculator", PremiumCalculator);
 
 // Start the server on port 3000
-// This makes the app listen for requests on port 3000
+// This makes the app listen for requests on port 3000, making it accessible via http://localhost:3000
 app.listen(3000, () => {
-  // Log a message when the server starts successfully
+  // Log a message when the server starts successfully, indicating it's ready to accept requests
   console.log("Server is running on http://localhost:3000");
 });
