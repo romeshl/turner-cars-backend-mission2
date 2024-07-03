@@ -7,7 +7,11 @@ const app = express();
 // Import routers from the respective APIs for modular route handling
 const RiskRatingCalculator = require("./Routes/RiskRatingCalculator/RiskRatingCalculator");
 const PremiumCalculator = require("./Routes/PremiumCalculator/PremiumCalculator");
+<<<<<<< HEAD
 const CarValueCalculator = require("./Routes/CarValueCalculator/CarValueCalculator");
+=======
+const API1 = require('./Routes/API-1/API1');
+>>>>>>> d63ded68e2ac1749da92abba5bd137117d9154af
 
 // Middleware to parse JSON bodies
 // This allows us to access request body data as JSON, which is essential for POST and PUT requests
