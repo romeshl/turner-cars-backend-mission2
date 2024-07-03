@@ -52,11 +52,15 @@ Followed few youtube videos and tutorials to get a better understanding of Test-
 
 ## Task 5. Create Test Cases
 
+[API-1 CarValueCalculator - Test Cases](./Tests/CarValueCalculator%20-%20Test%20cases.md)
+
 [API-2 RiskRatingCalculator - Test Cases](./Tests/RiskRating%20Calculator%20-%20Test%20cases.md)
 
 [API-3 PremiumCalculator - Test Cases](./Tests/PremiumCalculator%20-%20Test%20cases.md)
 
 ## Task 6. Create Unit Tests
+
+[API-1 CarValueCalculator - Unit Tests](./Tests/CarValueCalculator.test.js)
 
 [API-2 RiskRatingCalculator - Unit Tests](./Tests/RiskRatingCalculator.test.js)
 
