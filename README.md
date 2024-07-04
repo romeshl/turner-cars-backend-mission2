@@ -72,7 +72,7 @@ This repo contains all the APIs. You can access them by following [instructions]
 
 ## Task 8. Code Review and Refactoring
 
-Pending.
+We collaboratively reviewed each other's code and agreed on a unified structure for the APIs, which we then consistently applied to all the APIs.
 
 ## Task 9. Present at Show and Tell
 
