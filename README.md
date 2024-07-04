@@ -43,6 +43,10 @@ In-Progress JIRA board
 
 ![screenshot](./Mission%202%20-%20In%20progress%20-%20JIRA.png)
 
+Completed JIRA board
+
+![screenshot](./Completed%20JIRA%20-Board.png)
+
 ## Task 3. Daily Standup
 
 We've been having daily meet-ups.
