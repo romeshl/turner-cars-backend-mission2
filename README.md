@@ -76,8 +76,8 @@ We collaboratively reviewed each other's code and agreed on a unified structure 
 
 ## Task 9. Present at Show and Tell
 
-Pending.
+Presenting online on 04/07/2024 at 6:00PM
 
 ## Task 10. Submit the work
 
-Pending.
+Submission on 04/07/2024.
