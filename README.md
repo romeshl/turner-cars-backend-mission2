@@ -26,6 +26,7 @@ Use below command to run the Server.
 npm run start
 ```
 Jest tests can be run using the following command.
+*** you need to run the server before you can run tests. 
 ```
 npm run test
 ```
